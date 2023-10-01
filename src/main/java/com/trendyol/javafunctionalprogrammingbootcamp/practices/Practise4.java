@@ -8,6 +8,11 @@ public class Practise4 {
         // TODO: implement method that accepts list of strings and a boolean which indicates order way
         // TODO: returns them ordering by their length.
 
-        return List.of();
+        return strings
+                .stream()
+                .sorted((a,b) -> decreasing ?
+                        Integer.compare(b.length(), a.length()) :
+                        Integer.compare(a.length(), b.length()))
+                .toList();
     }
 }
